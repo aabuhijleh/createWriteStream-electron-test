@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 import { app, BrowserWindow } from "electron";
 import path from "path";
+import { CONFIG } from "./config";
 
 function createWindow() {
   // Create the browser window.
@@ -13,10 +14,12 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../views", "index.html"));
+  // mainWindow.loadFile(path.join(__dirname, "../views", "index.html"));
+
+  mainWindow.loadURL(CONFIG.URL);
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools({mode: "undocked", activate: true})
 }
 
 // This method will be called when Electron has finished

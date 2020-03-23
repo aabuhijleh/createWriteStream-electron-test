@@ -14,7 +14,8 @@
     "postinstall": "electron-builder install-app-deps",
     "prestart": "npm run compile",
     "start": "electron .",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "serve": "serve -s server"
   },
   "repository": "https://github.com/aabuhijleh/electron-typescript-quick-start",
   "keywords": [
@@ -36,6 +37,7 @@
     "del-cli": "^3.0.0",
     "electron": "^8.1.1",
     "electron-builder": "^22.4.1",
+    "serve": "^11.3.0",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   }
